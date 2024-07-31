@@ -27,20 +27,19 @@ namespace Workshop_2.models
             Salary = salary;
         }
 
-        private void CalculateBonus()
+        private double CalculateBonus()
         {
             //Este metodo calculara la bonificacion del 10% sobre el salario del empleado
             double bonus = Salary * 0.1;
-            Salary += bonus;
-            Console.WriteLine($"El empleado {Name} {LastName} recibe un bonus de ${bonus} por su trabajo.");
+            var finalSalary = Salary + bonus;
+            return finalSalary;
         }
 
         //Este método imprimirá en la consola la información del empleado 
         public void ShowInfo()
         {
 
-            Console.WriteLine($"{Name,-10}|{LastName,-10}|{IdNumber,-12}|{Age,-10}|{Position,-12}|{Salary,-20}|");
-            CalculateBonus();
+            Console.WriteLine($"{Name,-10}|{LastName,-10}|{IdNumber,-12}|{Age,-10}|{Position,-12}|{Salary,-20:C}|{CalculateBonus(),-20:C}  |");
             
         }
 

@@ -128,7 +128,7 @@ namespace Workshop_2.models
         // Método para obtener y validar el salario del empleado desde la entrada del usuario
         public static double GetValidSalaryFromUserInput()
         {
-            Console.Write("Precio: ");
+            Console.Write("Salario: ");
             // Intenta convertir la entrada a un double
             if (!double.TryParse(Console.ReadLine(), out double salary))
             {
